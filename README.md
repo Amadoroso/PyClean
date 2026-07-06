@@ -2,7 +2,7 @@
 
 A lightweight, interactive Python utility designed to recursively find and purge Python bytecode (`__pycache__`) and static type-checker caches (`.mypy_cache`) from your project directories.
 
-## ⚙️ Mechanics
+## Mechanics
 
 Unlike standard shell commands (`find` + `rm -rf`), this script is entirely OS-independent. It uses Python's built-in libraries to safely handle directory traversal and removal:
 * **`pathlib.Path.rglob`**: Recursively searches the current working directory for target cache folders using generator objects for memory efficiency.
@@ -24,7 +24,7 @@ python3 ft_pyclean.py
 3. It prints a color-coded log of every directory removed.
 4. It outputs the total number of cleaned cache folders.
 
-## 📋 Requirements
+## Requirements
 
 * Python 3.x
 * No external libraries or pip installations required (strictly uses standard built-ins: `pathlib`, `shutil`).
