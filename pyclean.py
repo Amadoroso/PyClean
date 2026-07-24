@@ -24,6 +24,16 @@ def ft_clean_print(current_dir) -> None:
         print(f"{green}Removed{reset}: {mypycache}")
         count += 1
 
+    for ds_store in current_dir.rglob(".DS_Store"):
+        ds_store.unlink() # built in method for the return path obj
+        print(f"{green}Removed{reset}: {ds_store}")
+        count += 1
+
+    for vscode in current_dir.rglob(".vscode"):
+        vscode.unlink() # built in method for the return path obj
+        print(f"{green}Removed{reset}: {vscode}")
+        count += 1
+
     if count > 0:
         print(f"{green}Sucessfully cleaned {count} files{reset}")
     else:
