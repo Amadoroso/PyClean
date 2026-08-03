@@ -10,7 +10,6 @@ void	ft_putstr(char *s)
 	}
 }
 
-
 size_t	ft_strcmp(char *s1, char *s2)
 {
 	while (*s1 && *s1 == *s2)
