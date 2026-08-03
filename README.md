@@ -30,7 +30,7 @@ python3 ft_pyclean.py
 * No external libraries or pip installations required (strictly uses standard built-ins: `pathlib`, `shutil`).
 
 > [!IMPORTANT]
->The C Version (Hard Mode)
+># The C Version (Hard Mode)
 >Side Note: I also wrote a version of this utility entirely in C. Just to see how much more complex it would be.
 >
 >Compiling and Running the C script
