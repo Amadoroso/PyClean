@@ -28,3 +28,18 @@ python3 ft_pyclean.py
 
 * Python 3.x
 * No external libraries or pip installations required (strictly uses standard built-ins: `pathlib`, `shutil`).
+
+⚡ The C Version (Hard Mode)
+Side Note: I also wrote a version of this utility entirely in C. Just to see how much more complex it would be.
+
+Compiling and Running the C script
+If you want to try the C version, ensure you have a C compiler like gcc or clang installed.
+
+Run the following command in your terminal to compile the source files into a binary executable:
+
+# Compile the main file and the utility functions
+gcc -Wall -Wextra -Werror pyclean.c pyclean_utils.c pyclean.h -o pyclean
+
+# Execute the binary
+./pyclean
+(Note: If you plan to use it globally, you can move the compiled binary to your bin folder: sudo mv pyclean /usr/local/bin/)
