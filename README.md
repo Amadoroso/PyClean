@@ -46,5 +46,7 @@ python3 ft_pyclean.py
 >
 > # Performance
 > The compiled C script uses ~10x less memory on macOS 26.6 then python, 1.5MB vs 17.2MB.
+> 
 > Its about ~26x times faster: C did `13,245,527 instructions in 5,865,586 cycles` while Python did `346,130,325 instructions in 145,919,811 cycles`.
+> 
 > So C is much more efficient and faster, but much more complex.
