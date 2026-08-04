@@ -11,7 +11,6 @@ int	ft_strlen(char *s)
 	return (len);
 }
 
-
 char *join(char *s1, char *s2)
 {
 	char *joined_str;
