@@ -31,12 +31,12 @@ python3 ft_pyclean.py
 
 > [!IMPORTANT]
 ># The C Version (Hard Mode)
->Side Note: I also wrote a version of this utility entirely in C. Just to see how much more complex it would be.
+>I also wrote a version of this utility entirely in C. Just to see how much more complex it would be.
 >
 >Compiling and Running the C script
 >If you want to try the C version, ensure you have a C compiler like gcc or clang installed.
 >
->Run the following command in your terminal to compile the source files into a binary executable:
+>Run the following command in your terminal to compile the source files into a executable:
 >
 ># Compile the main file and the utility functions
 >gcc -Wall -Wextra -Werror pyclean.c pyclean_utils.c pyclean.h -o pyclean
