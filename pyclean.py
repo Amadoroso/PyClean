@@ -14,25 +14,25 @@ reset = "\033[0m"
 # These functions are iterators, everytime you call it they return the next thing
 def ft_clean_print(current_dir) -> None:
     count = 0
-    for pycache in current_dir.rglob("__pycache__"):
-        shutil.rmtree(pycache)  # shutil is a built in module (pre written func)
-        print(f"{green}Removed{reset}: {pycache}")
-        count += 1
 
-    for mypycache in current_dir.rglob(".mypy_cache"):
-        shutil.rmtree(mypycache) # shutil means shell utils, its the equivalent for 'rm -rf'
-        print(f"{green}Removed{reset}: {mypycache}")
-        count += 1
-
-    for ds_store in current_dir.rglob(".DS_Store"):
-        ds_store.unlink() # built in method for the return path obj
-        print(f"{green}Removed{reset}: {ds_store}")
-        count += 1
-
-    for vscode in current_dir.rglob(".vscode"):
-        vscode.unlink() # built in method for the return path obj
-        print(f"{green}Removed{reset}: {vscode}")
-        count += 1
+    to_del: list[str] = [
+        "__pycache__",
+        ".mypy_cache",
+        ".DS_Store",
+        ".vscode"
+    ]
+    for name in to_del:
+        for file in current_dir.rglob(name):
+            try:
+                if file.is_file():
+                    file.unlink() # built in method for the return path obj
+                    count += 1
+                else:
+                    shutil.rmtree(file)  # shutil is a built in module (pre written func)
+                    count += 1
+                print(f"{green}Removed{reset}: {file}")
+            except OSError as e:
+                print(f"{red}Couldn't remove {file}: {e}{reset}")
 
     if count > 0:
         print(f"{green}Sucessfully cleaned {count} files{reset}")
